@@ -1,19 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>sample</title>
+<title>Video Compare</title>
 </head>
 <body>
-	Media path(0): <input id="textUrl0" type="file" size="100"><br>
-	Media path(1): <input id="textUrl1" type="file" size="100">
+
+	<h3>Input image file (You can drag&drop file)</h3>
+	<input id="radioImageTypeVideo" type="radio" name="radioGroupImageType" value="video" checked>Video file
+	<input id="radioImageTypeStills" type="radio" name="radioGroupImageType" value="stills">Still files
+	<br><br>
+	Left : <input id="textUrl0" type="file" size="100" accept="video/*"><br>
+	Right: <input id="textUrl1" type="file" size="100" accept="video/*">
+	<hr>
+
+	<video id="video0" controls muted></video>
+	<video id="video1" muted></video>
+	<img id="img0">
+	<img id="img1">
 	<br>
-	<video id="video0" controls >
-		<!-- <source src="./Time - 37954.mp4"> -->
-	</video>
-	<video id="video1">
-		<!-- <source src="./Time - 37954.mp4"> -->
-	</video>
+
 	<br>
 
 	FPS = <input id="textFps" type="number" step="0.001" min="1" max="120" value="30">
